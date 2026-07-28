@@ -3,6 +3,7 @@
 # First Tree Seed Progress
 
 - [x] Seed Phase 1 structure
+- [x] Seed Phase 2 content
 
 ## Seed identity
 
