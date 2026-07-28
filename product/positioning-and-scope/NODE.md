@@ -7,3 +7,8 @@ owners: [discord9]
 
 Product identity, intended observability use cases, and explicit boundaries on
 what GreptimeDB is designed to provide.
+
+## Leaves
+
+- [Unified Observability Backend](./unified-observability-backend.md)
+- [Interoperable Adoption Surfaces](./interoperable-adoption-surfaces.md)
