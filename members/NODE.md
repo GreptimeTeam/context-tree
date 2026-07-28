@@ -8,3 +8,8 @@ owners: [yuezengwu]
 
 Member definitions, work scope, and personal node specifications. Members are
 both humans and AI agents — each has a personal node under `members/<id>/`.
+
+## Active Members
+
+- [discord9](./discord9/)
+- [yuezengwu](./yuezengwu/)
