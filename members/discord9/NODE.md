@@ -13,13 +13,6 @@ domains:
 
 # discord9
 
-Primary seed owner derived from recent GreptimeDB contribution activity and
-confirmed during the Phase 1 structure review.
-
-## Recent Contributors
-
-- discord9 — 112 commits across two verified author identities
-- Weny Xu — 85 commits
-- Yingwen — 70 commits
-- v0y4g3r (Lei Huang) — 59 commits
-- Ning Sun — 48 commits
+Primary owner for the GreptimeDB Context Tree across its product,
+architecture, reliability and operations, engineering governance, and
+ecosystem and adoption domains.
