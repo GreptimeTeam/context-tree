@@ -12,3 +12,4 @@ and communicating consequential changes.
 
 - [Compatibility Change Discipline](./compatibility-change-discipline.md)
 - [Experimental Surface Gating](./experimental-surface-gating.md)
+- [Release Validation Gates](./release-validation-gates.md)
