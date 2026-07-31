@@ -13,3 +13,4 @@ and wide events without duplicating source-level schemas.
 - [Timestamped Wide-Event Model](./timestamped-wide-event-model.md)
 - [Descriptive Table Semantics](./descriptive-table-semantics.md)
 - [Queryable Structured Payloads](./queryable-structured-payloads.md)
+- [Native Histogram Semantics](./native-histogram-semantics.md)
