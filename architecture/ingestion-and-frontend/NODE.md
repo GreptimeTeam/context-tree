@@ -12,6 +12,7 @@ boundary between external clients and internal services.
 
 - [Protocol ingress convergence](protocol-ingress-convergence.md)
 - [Protocol compatibility adapters](protocol-compatibility-adapters.md)
+- [HTTP listener surface separation](http-listener-surface-separation.md)
 - [Statement orchestration](statement-orchestration.md)
 - [Schema-aware ingestion](schema-aware-ingestion.md)
 - [Partition-aware write dispatch](partition-aware-write-dispatch.md)
