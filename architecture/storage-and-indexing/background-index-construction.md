@@ -33,8 +33,9 @@ permanently unindexed.
 - Stale work caused by concurrent compaction, file replacement, or a newer
   schema/index definition must be aborted rather than publishing obsolete
   metadata.
-- A build and its publication fence derive from the same consistent region
-  snapshot.
+- The index definition used by a build and its schema-generation fence derive
+  from the same region version, while the SST-generation fence uses
+  authoritative current manifest metadata.
 - If the source SST is still current but only the schema generation advanced,
   the build is retried against the latest generation.
 - For one SST, the scheduler keeps at most one active build and one coalesced
