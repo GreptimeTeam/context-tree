@@ -4,6 +4,7 @@ owners: [discord9]
 soft_links:
   - /architecture/metadata-and-control-plane/durable-distributed-procedures.md
   - /architecture/metadata-and-control-plane/region-leadership-transfer.md
+  - /architecture/storage-and-indexing/manifest-governed-object-reclamation.md
 ---
 
 ## Decision
@@ -12,9 +13,9 @@ Selected control-plane transitions and query diagnostics are recorded as
 structured events in internal tables with configurable retention. Operators
 may retain all event types, an explicit subset, or none.
 
-High-frequency batch procedures may use sparse outcome reporting: routine
-lifecycle transitions and no-op items are omitted, while material per-item
-effects and retry requirements remain queryable.
+Batch garbage collection uses sparse outcome reporting: routine lifecycle
+transitions and no-op regions are omitted, while material per-region effects
+and retry requirements remain queryable.
 
 ## Rationale
 
@@ -22,10 +23,10 @@ Logs alone make it difficult to reconstruct who changed durable state and how
 a long-running operation progressed. Typed, queryable events preserve a
 bounded operational timeline that can be correlated with database behavior.
 
-Recording every selected item on every batch cycle would turn that timeline
-into noise. Sparse reporting keeps the retained signal proportional to actual
-effects, but known irreversible work must not disappear merely because another
-peer fails or the procedure later retries.
+Recording every selected region on every batch garbage-collection cycle would
+turn that timeline into noise. Sparse reporting keeps the retained signal
+proportional to actual effects, but known irreversible work must not disappear
+merely because another peer fails or the procedure later retries.
 
 ## Constraints
 
