@@ -14,3 +14,4 @@ and wide events without duplicating source-level schemas.
 - [Descriptive Table Semantics](./descriptive-table-semantics.md)
 - [Queryable Structured Payloads](./queryable-structured-payloads.md)
 - [Native Histogram Semantics](./native-histogram-semantics.md)
+- [Telemetry-derived Entity Relationships](./telemetry-derived-entity-relationships.md)
