@@ -10,6 +10,11 @@ declared compatibility ranges. Existing fields, enum identities, and version
 counters keep their meanings; new readers supply defaults for older data, and
 supported older readers tolerate additions made by newer writers.
 
+An internal model may become more strongly typed without changing its durable
+boundary. Within a supported downgrade range, writers retain an encoding that
+the older reader understands while readers accept both the legacy and newer
+forms needed during the transition.
+
 ## Rationale
 
 Manifests, WAL records, object metadata, metadata-store values, and messages
@@ -21,6 +26,8 @@ without reinterpreting existing state.
 
 - Format changes require a version-scoped compatibility case in both relevant
   directions; ordinary integration coverage is not a substitute.
+- Internal representation cleanup does not justify changing the serialized
+  shape when a supported older binary must still read newly written state.
 - Fields and enum variants may be added, but existing positions,
   discriminants, and meanings are not repurposed.
 - Monotonic persisted versions never reset or move backward.
