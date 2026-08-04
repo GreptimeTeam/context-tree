@@ -32,3 +32,7 @@ while separating routine and full scans contains object-store listing cost.
 - Collection must operate against the authoritative region placement and must
   not delete through a follower's stale view.
 - Data files and their versioned index sidecars are reclaimed consistently.
+- Flush and compaction outputs remain owned by the producing job until their
+  manifest publication outcome is known. Definitely unpublished outputs may be
+  reclaimed immediately; outputs from an update that may have persisted are
+  retained rather than risking deletion of manifest-referenced data.
