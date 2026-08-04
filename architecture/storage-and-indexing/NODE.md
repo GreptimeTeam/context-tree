@@ -19,3 +19,4 @@ indexes.
 - [Manifest-governed object reclamation](manifest-governed-object-reclamation.md)
 - [SST-local secondary indexes](sst-local-secondary-indexes.md)
 - [Background index construction](background-index-construction.md)
+- [Region lifecycle publication fencing](region-lifecycle-publication-fencing.md)
